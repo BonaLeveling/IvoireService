@@ -53,7 +53,7 @@ function App() {
           <div className="max-w-6xl mx-auto">
             
             <div className="text-center mb-16">
-              <span className="text-[#f27f0c] text-sm md:text-base font-semibold tracking-wide uppercase text-sm">Notre Mission</span>
+              <span className="text-[#f27f0c] text-sm md:text-base font-semibold tracking-wide uppercase">Notre Mission</span>
               <h1 className="text-2xl md:text-3xl font-bold text-center py-2">
                 L'humain au cœur de vos projets.
               </h1>
@@ -247,11 +247,11 @@ function App() {
             </div>
             </div>
             <div className='mt-6 text-sm md:text-base flex flex-col gap-2 md:gap-3 md:w-[40%] justify-end'>
-              <a href="#" className='p-2 md:p-3 bg-white border border-slate-200 rounded-lg flex justify-between items-center'>
+              <a href="#" className='p-2 md:p-3 bg-white border border-slate-200 rounded-lg flex justify-between items-center hover:bg-slate-100'>
                 <span className='flex gap-2'><Gavel size={24} className='stroke-black/60 rotate-260 '/> Conditions Générales d'utilisation</span> 
                 <ChevronRight size={18} className='stroke-black/60'/>               
               </a>
-              <a href="#" className='p-2 md:p-3 bg-white border border-slate-200 rounded-lg flex justify-between items-center '>  
+              <a href="#" className='p-2 md:p-3 bg-white border border-slate-200 rounded-lg flex justify-between items-center hover:bg-slate-100'>  
                 <span  className='flex gap-2'> <LockKeyhole size={24}  className='stroke-black/60 ' /> Politique de confidentialité </span> 
                 <ChevronRight size={18} className='stroke-black/60'/>
               </a>

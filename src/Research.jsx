@@ -1,9 +1,11 @@
 import './App.css'
+import { useState } from 'react'
 import Footer from './Footer'
 import {Link as RouterLink} from 'react-router'
-import { Search, Map, BrickWall, Boxes, TextAlignJustify  } from 'lucide-react'
+import { Search, Map, BrickWall, Boxes, TextAlignJustify, X  } from 'lucide-react'
 
 function Research () {
+    const [MenuIsOpen, setMenuIsOpen]= useState (false)
     return (
         <div className=' font-["DM_Sans"]  text-base font-medium '>
             <nav className='flex items-center justify-between px-6 py-4 bg-white/80 w-full fixed font-["DM_Sans"] z-50'>
@@ -15,10 +17,20 @@ function Research () {
                     <RouterLink to="/login" className='bg-green-500 text-white px-3 py-1.5 rounded-md hover:bg-green-600 hover:duration-300 hover:ease-in'>Connexion</RouterLink>
                     <RouterLink to="/register" className='bg-[#f27f0c] text-white px-3 py-1.5 rounded-md hover:bg-amber-600 hover:duration-300 hover:ease-in'>Inscription</RouterLink>
                 </ul>
-                <button className='md:hidden'>
+                <button onClick={() => setMenuIsOpen(! MenuIsOpen)} className='sm:hidden'>
                     <TextAlignJustify />
                 </button>
             </nav>
+            <div className={`sm:hidden fixed right-0 bg-[#f27f0c] text-white font-["DM_Sans"] z-100 h-screen py-10 px-2 w-70 shadow-xl backdrop-blur-lg transition-transform duration-300 ease-in-out  ${MenuIsOpen?'translate-x-0' : 'translate-x-full'}`}>
+                <button onClick={() => setMenuIsOpen(false)} className='cursor-pointer absolute top-2 right-2 hover:bg-white/20 rounded-md p-2'>
+                    <X  size={20}/>
+                </button>
+                <ul className='flex flex-col mt-6'>    
+                    <RouterLink to="/" className='px-5 py-2 cursor-pointer hover:bg-white/20 rounded-md'>Accueil</RouterLink>
+                    <RouterLink to="/login" className='px-5 py-2 cursor-pointer hover:bg-white/20 rounded-md'>Connexion</RouterLink>
+                    <RouterLink to="/register" className='px-5 py-2 cursor-pointer hover:bg-white/20 rounded-md'>Inscription</RouterLink>
+                </ul>
+            </div>
            
             <div>
                 <div className='pt-20 px-6 sm:px-8 flex flex-col items-center justify-center'>
