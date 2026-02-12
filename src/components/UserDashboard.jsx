@@ -366,7 +366,7 @@ const ProviderDashboard = () => {
           <div className="absolute bottom-0 w-72 p-6 border-t border-gray-50 bg-white">
             <button className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-red-500 hover:bg-red-50 transition-colors font-bold">
               <LogOut size={20} />
-              <span>Déconnexion</span>
+              <a href="/login"><span>Déconnexion</span></a>
             </button>
           </div>
         </div>
